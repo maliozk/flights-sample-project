@@ -1,0 +1,30 @@
+.header {
+    background-color: rgb(35, 37, 53);
+    width: 100%;
+    height: 46px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: visible;
+    display: block;
+}
+
+.title {
+    font-size: 30px;
+    margin-left: 1rem;
+    color: floralwhite;
+    line-height: 46px;
+}
+
+.userinfo {
+    border-radius: 18px;
+    width: 36px;
+    height: 36px;
+    background-color: lightblue;
+    font-size: 16px;
+    text-align: center;
+    line-height: 36px;
+    float: right;
+    margin-right: 5px;
+    margin-top: 5px;
+}

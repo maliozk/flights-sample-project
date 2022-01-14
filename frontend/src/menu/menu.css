@@ -1,0 +1,49 @@
+.menu {
+    background-color: rgb(35, 37, 53);
+    width: 200px;
+    height: 100%;
+    position: absolute;
+    top: 46px;
+    left: 0;
+    padding-top: 24px;
+    padding-left: 8px;
+}
+
+.menuButton{
+    width: 32px;
+    height: 32px;
+    background-color: gray;
+}
+
+li {
+    font-size: 24px;
+    margin: 6px;
+    padding-left: 10px;
+    color: floralwhite;
+}
+
+  
+.item:link {
+    text-decoration: none;
+    color: floralwhite;
+  }
+
+  .active:link {
+    text-decoration: underline;
+    color: floralwhite;
+  }
+  
+  .item:visited {
+    text-decoration: none;
+    color: floralwhite;
+  }
+  
+  .item:hover {
+    text-decoration: underline;
+    color: floralwhite;
+  }
+  
+  .item:active {
+    text-decoration: underline;
+    color: floralwhite;
+  }
