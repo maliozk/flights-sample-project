@@ -3,6 +3,74 @@
 }
 
 .recordContainer {
-    background-color: #5b646a;
+    background-color: #1e2c37;
     flex-grow: 1;
+    color: aliceblue;
+    padding: 20px;
+}
+
+.table {
+    flex-direction: column;
+    font-size: 18px;
+    height: calc(100vh - 200px);
+    overflow-y: auto;
+}
+
+.tableRow {
+    display: flex;
+    margin: 5px;
+    padding: 8px;
+    background-color: #0a1015;
+    border-radius: 2px;
+    
+}
+
+.tableCell1 {
+    flex-grow: 3;
+    padding-left: 2px;
+    flex-basis: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin: 5px;
+}
+
+.tableCell2 {
+    flex-grow: 2;
+    padding-left: 2px;
+    flex-basis: 0;
+    margin: 5px;
+}
+
+.tableCell3 {
+    flex-grow: 1;
+    padding-left: 2px;
+    margin: 5px;
+    flex-basis: 0;
+}
+
+.search {
+    background-color: #1e2c37;
+    color: aliceblue;
+    margin-left: 15px;
+}
+
+span{
+    list-style-type: none;
+}
+
+span:hover {
+    text-decoration: underline;
+    color: aquamarine;
+}
+
+.options{
+    display: flex;
+    flex-direction: row;
+}
+
+.option
+{
+    margin: 5px;
+    user-select: none;
 }

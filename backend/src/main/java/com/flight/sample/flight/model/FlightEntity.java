@@ -5,19 +5,20 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
+import java.time.Instant;
 
 @Entity
-@Table(name = "flights")
+@Table(name = "flightsNew")
 @AllArgsConstructor
 @NoArgsConstructor
 @Getter
 @Setter
 public class FlightEntity {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     Long id;
-    String number;
+    int number;
     String name;
+    Instant date = Instant.now();
 }

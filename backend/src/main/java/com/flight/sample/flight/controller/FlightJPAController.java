@@ -1,14 +1,13 @@
 package com.flight.sample.flight.controller;
 
-import com.flight.sample.flight.model.Flight;
 import com.flight.sample.flight.model.FlightEntity;
 import com.flight.sample.flight.repository.FlightCrudRepository;
-import com.flight.sample.flight.repository.FlightRepository;
 import org.springframework.web.bind.annotation.*;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
 @RestController
+@CrossOrigin(origins = "http://localhost:3000", methods = {RequestMethod.DELETE, RequestMethod.PUT, RequestMethod.GET, RequestMethod.POST})
 @RequestMapping("/fl")
 public class FlightJPAController {
 
@@ -23,15 +22,23 @@ public class FlightJPAController {
         return Mono.justOrEmpty(flightCrudRepository.findById(id));
     }
 
+    @CrossOrigin(origins = "http://localhost:3000")
     @GetMapping
     private Flux<FlightEntity> getAllEmployees() {
         return Flux.fromIterable(flightCrudRepository.findAll());
     }
 
-    @GetMapping("/insert/{id}")
-    private Mono<FlightEntity> insert(@PathVariable Long id)
+    @PutMapping("/insert")
+    private Mono<FlightEntity> insert(@RequestBody FlightEntity entity)
     {
-        return Mono.just(flightCrudRepository.save(new FlightEntity(id, "name " + id, "number " + id)));
+        return Mono.just(flightCrudRepository.save(entity));
+    }
+
+    @DeleteMapping("/remove/{id}")
+    private Mono<Boolean> remove(@PathVariable Long id)
+    {
+        flightCrudRepository.deleteById(id);
+        return Mono.just(true);
     }
 
 //    @PostMapping("/update")
